@@ -8,20 +8,25 @@ html
 	.ntz-wrapper
 		//- .ntz-bgStripe
 		.ntz-main
+			img.ntz-logo( src="images/ntz-logo.png" alt="logo" )
 			.bottomShadow
-			h1
-				img.ntz-logo( src="images/ntz-logo.png" alt="logo" )
-			a( class="logo" href="http://www.ivancash.com" target="_blank" )
-				img( src="images/cashIcon.png" alt="Ivan Cash Studio")
 			.actions 
-				a.play(href='#watch', target='_blank') Watch Film
-				a.about(href='#artist', target='_blank') About Artist
+				a( class="play" ) Watch Film
+				a.about(href='http://www.cashstudios.co/', target='_blank') About Artist
 				script(src='https://gumroad.com/js/gumroad.js')
 				a.gumroad-btn(href='https://gum.co/wvIy', target='_blank') Purchase Limited Sign
-
-			iframe( class="video", src='https://player.vimeo.com/video/139909203?color=acdd37', width='500', height='281', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
-			.product
-				script(src='https://gumroad.com/js/gumroad-embed.js')
-				.gumroad-product-embed(data-gumroad-product-id='wvIy')
-					a(href='https://gumroad.com/l/wvIy') Loading...
+			.video-wrapper
+				.video-container
+					iframe( id="video" class="video" src='http://player.vimeo.com/video/6284199?api=1', frameborder='0')
+			.push 
+				h1 Buy limited edition prints
+				p Limited edition series of one hundred 18”x24” metal sign prints, signed by the artist. (We do not condone illegal installation of these signs.)
+				script(src='https://gumroad.com/js/gumroad.js')
+				a( href='https://gum.co/wvIy', target='_blank' )
+					p.label Purchase Limited Print
+					img( src="images/sign.jpg" alt="sign" )
+			a( class="logo" href="http://www.cashstudios.co/" target="_blank" )
+				img( src="images/cashIcon.png" alt="Ivan Cash Studio")
+			
+			
 

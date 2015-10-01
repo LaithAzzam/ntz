@@ -12,6 +12,7 @@ html,
 	background: url(images/ntz-bg.jpg)no-repeat center center fixed;
 	background-size: cover;
 	position: relative;
+	display: flex;
 }
 
 .ntz-bgStripe
@@ -28,7 +29,8 @@ html,
 
 .ntz-main 
 {
-	height: 100%; width: 100%;
+	position: relative;
+	height: calc( 100% - 0px); width: calc( 100% - 0px );
 	background-color: rgba(255,255,255,1);
 
 	box-shadow: 5px 15px 75px rgba(0,0,0,.05);
@@ -37,7 +39,7 @@ html,
 
 	background-color: transparent;
 
-	background: url(images/ntz-bg-dark-blur.jpg)no-repeat center center fixed;
+	background: url(images/ntz-bg.jpg)no-repeat center center fixed;
 	background-size: cover;
 
 	overflow-y: scroll;
@@ -63,11 +65,36 @@ html,
 	}
 	.ntz-logo 
 	{
+		display: block;
+		width: 90%;
 		max-width: 550px;
-		margin-top: 25px;
+		margin: 25px auto 0px auto;
 	}
 	.video {
-		margin-top: 50px;
+	}
+	.video-wrapper 
+	{
+		width: 90%;
+		max-width: 960px;
+		margin: auto;
+		display: block;
+		margin-top: 75px;
+	}
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	}
+	.video-container iframe,  
+	.video-container object,  
+	.video-container embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 	h1 
 	{
@@ -99,17 +126,24 @@ html,
 	}
 	.actions 
 	{
-		flex-flow: row;
+		text-align: center;
+		margin-bottom: 30px;
 		a 
 		{
 			margin-right: 25px;
 			color: white;
 			text-decoration: none;
 			text-transform: uppercase;
+			cursor: hand; cursor: pointer;
+			font-weight: 100;
 		}
 		a:last-of-type
 		{
 			margin-right: 0px;
+		}
+		a:hover, p:hover
+		{
+			text-decoration: underline;
 		}
 		img {
 			width: 50px;
@@ -150,30 +184,104 @@ html,
 	}
 }
 
-.active.ntz-wrapper
-{
-	.logo
+.push {
+	text-align: center;
+	width: 90%;
+	max-width: 960px;
+	margin: 100px auto 50px auto;
+	color: white;
+	h1 
 	{
-		transform: translate(0px,0px) scale(.95);
-		opacity: .6;
-		transition: all 250ms ease-out;
-		margin-bottom: 25px;
-		position: fixed;
-		top: 25px; left: 25px;
-		img 
+		text-transform: uppercase;
+		font-size: 44px;
+	}
+	p 
+	{
+		margin-bottom: 55px;
+		font-size: 12px;
+	}
+	img
+	{
+		width: 100%;
+	}
+	a 
+	{
+		display: block;
+		position: relative;
+		.label 
 		{
-			margin-bottom: 0px;
+			position: absolute;
+			top: 50%; left: 50%;
+			z-index: 50;
+			transform: translate(-50%,-50%) scale(.95);
+			color: $red;
+			opacity: 0;
+			padding: 25px 25px;
+			background-color: white;
+			font-size: 34px;
+			transition: all 250ms ease-out;
 		}
 	}
-	.logo:hover 
+}
+.push:hover
+{
+	a
 	{
-		opacity: 1;
-		transform: translate(0px,0px) scale(1);
+		.label
+		{
+			opacity: 1;
+			transform: translate(-50%,-50%) scale(1);
+			box-shadow: 0px 0px 5px rgba(0,0,0,.15);
+		}
+	}
+}
+
+.logo
+{
+	display: block;
+	margin: auto;
+	width: 150px;
+	margin-top: 25px;
+	margin-bottom: 45px;
+	transition: all 250ms ease-out;
+	img 
+	{
+		width: 100%;
 	}
 }
 
 .product {
-	margin: 50px auto;
-	width: 100%;
-	max-width: 500px;
+	margin: auto;
+	iframe {
+		margin: auto !important;
+	}
+}
+
+@media only screen 
+and (max-width : 650px)  { 
+
+.play
+{
+	display: none;
+}
+.push 
+{
+	margin: 75px auto 50px auto;
+	h1 {
+		font-size: 26px;
+	}
+	p
+	{
+		font-size: 14px;
+		margin-top: 10px;
+	}
+	a 
+	{
+		.label
+		{
+			font-size: 20px;
+		}
+	}
+}
+
 }
