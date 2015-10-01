@@ -8,13 +8,20 @@ html
 	.ntz-wrapper
 		//- .ntz-bgStripe
 		.ntz-main
+			.bottomShadow
 			h1
 				img.ntz-logo( src="images/ntz-logo.png" alt="logo" )
-			.actions 
-				img.play( src="images/play.svg" alt="buy" )
-				img.about( src="images/about.svg" alt="buy" )
-				img.buy( src="images/buy.svg" alt="buy" )
-		.logo 
-			a( href="http://www.ivancash.com" target="_blank" )
+			a( class="logo" href="http://www.ivancash.com" target="_blank" )
 				img( src="images/cashIcon.png" alt="Ivan Cash Studio")
+			.actions 
+				a.play(href='#watch', target='_blank') Watch Film
+				a.about(href='#artist', target='_blank') About Artist
+				script(src='https://gumroad.com/js/gumroad.js')
+				a.gumroad-btn(href='https://gum.co/wvIy', target='_blank') Purchase Limited Sign
+
+			iframe( class="video", src='https://player.vimeo.com/video/139909203?color=acdd37', width='500', height='281', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+			.product
+				script(src='https://gumroad.com/js/gumroad-embed.js')
+				.gumroad-product-embed(data-gumroad-product-id='wvIy')
+					a(href='https://gumroad.com/l/wvIy') Loading...
 
