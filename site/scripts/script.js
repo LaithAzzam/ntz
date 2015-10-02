@@ -22,8 +22,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Call the API when a button is pressed
     $('.play').bind('click', function(event) {
         player.api('play');
+        $('html,body').animate({
+        	scrollTop: $("#video").offset().top - 25
+        },'slow');
         return false;
     });
 
+    $(".buy").click(function() {
+	    $('html,body').animate({
+        	scrollTop: $(".push").offset().top - 25
+        },'slow');
+        return false;
+	});
 
 });

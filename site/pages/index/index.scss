@@ -4,15 +4,19 @@ body,
 html,
 .ntz-wrapper
 {
-	@extend %flex-center-all;
-
-	width: 100%;
-	height: 100%;
-
-	background: url(images/ntz-bg.jpg)no-repeat center center fixed;
-	background-size: cover;
 	position: relative;
 	display: flex;
+}
+.one
+{
+	background: url(images/ntz-bg.jpg)no-repeat center center fixed;
+	background-size: cover;
+	padding-bottom: 100px;
+}
+.two
+{
+	background: url(images/ntz-bg-2.jpg)no-repeat center center fixed;
+	background-size: cover;
 }
 
 .ntz-bgStripe
@@ -27,165 +31,146 @@ html,
 	opacity: .5;
 }
 
-.ntz-main 
+.bottomShadow
 {
+	height: 30px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px; left: 0px;
+	background-color: black;
+	z-index: 50;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,0.15+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#26000000',GradientType=0 ); /* IE6-9 */
+}
+.ntz-logo 
+{
+	display: block;
+	width: 80%;
+	max-width: 650px;
+	margin: 25px auto 0px auto;
+	opacity: .8;
+}
+.video {
+}
+.video-wrapper 
+{
+	width: 90%;
+	max-width: 960px;
+	margin: auto;
+	display: block;
+	margin-top: 40px;
+}
+.video-container {
 	position: relative;
-	height: calc( 100% - 0px); width: calc( 100% - 0px );
-	background-color: rgba(255,255,255,1);
-
-	box-shadow: 5px 15px 75px rgba(0,0,0,.05);
-
-	align-items: center;
-
-	background-color: transparent;
-
-	background: url(images/ntz-bg.jpg)no-repeat center center fixed;
-	background-size: cover;
-
-	overflow-y: scroll;
-
-	border-bottom: 5px solid white;
-
-	.bottomShadow
-	{
-		height: 30px;
-		width: 100%;
-		position: fixed;
-		bottom: 0px; left: 0px;
-		background-color: black;
-		z-index: 50;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,0.15+100 */
-	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.15) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#26000000',GradientType=0 ); /* IE6-9 */
-	}
-	.ntz-logo 
-	{
-		display: block;
-		width: 90%;
-		max-width: 550px;
-		margin: 25px auto 0px auto;
-	}
-	.video {
-	}
-	.video-wrapper 
-	{
-		width: 90%;
-		max-width: 960px;
-		margin: auto;
-		display: block;
-		margin-top: 75px;
-	}
-	.video-container {
-		position: relative;
-		padding-bottom: 56.25%;
-		padding-top: 30px;
-		height: 0;
-		overflow: hidden;
-	}
-	.video-container iframe,  
-	.video-container object,  
-	.video-container embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-	h1 
-	{
-		font-size: 60px;
-		color: white;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+h1 
+{
+	font-size: 60px;
+	color: white;
+	display: inline;
+	line-height: inherit;
+	span {
 		display: inline;
-		line-height: inherit;
-		span {
-			display: inline;
-		}
-		span:first-of-type 
-		{
-			background-color: $red;
-			display: inline;
-			padding: 25px 30px 20px 30px;
-			color: white;
-			border-top-left-radius: 5px;
-			border-bottom-left-radius: 5px;
-		}
-		span:last-of-type 
-		{
-			background-color: white;
-			display: inline;
-			padding: 25px 33px 20px 30px;
-			color: $red;
-			border-top-right-radius: 5px;
-			border-bottom-right-radius: 5px;
-		}
 	}
-	.actions 
+	span:first-of-type 
 	{
-		text-align: center;
-		margin-bottom: 30px;
-		a 
-		{
-			margin-right: 25px;
-			color: white;
-			text-decoration: none;
-			text-transform: uppercase;
-			cursor: hand; cursor: pointer;
-			font-weight: 100;
-		}
-		a:last-of-type
-		{
-			margin-right: 0px;
-		}
-		a:hover, p:hover
-		{
-			text-decoration: underline;
-		}
-		img {
-			width: 50px;
-			height: 50px;
-			display: inline-block;
-			margin-right: 15px;
-			border-radius: 50%;
-			border: 2px solid rgba(255,255,255,.4);
-			cursor: pointer; cursor: hand;
-			transition: all 275ms ease-out;
-			opacity: .6;
-			transform: translate(0,0px) scale(.85);
-			opacity: 0;
-			-webkit-backface-visibility: hidden;
-		}
-	}
-	button {
-		background: none;
-		border: 1px solid white;
-		outline: 0;
-		margin-top: 25px;
-		width: auto;
-		margin-right: 15px;
-		cursor: hand; cursor: pointer;
+		background-color: $red;
+		display: inline;
+		padding: 25px 30px 20px 30px;
 		color: white;
-		padding: 15px;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
 	}
-	button:last-of-type
+	span:last-of-type 
+	{
+		background-color: white;
+		display: inline;
+		padding: 25px 33px 20px 30px;
+		color: $red;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+}
+.actions 
+{
+	text-align: center;
+	margin-bottom: 0px;
+	a 
+	{
+		margin-right: 25px;
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+		cursor: hand; cursor: pointer;
+		font-weight: 100;
+		font-size: 18px;
+	}
+	a:last-of-type
 	{
 		margin-right: 0px;
 	}
-	button:hover {
-		background: white;
-		color: $red;
+	a:hover, p:hover
+	{
+		text-decoration: underline;
 	}
-	.moar {
-		margin-top: 100%;
+	img {
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+		margin-right: 15px;
+		border-radius: 50%;
+		border: 2px solid rgba(255,255,255,.4);
+		cursor: pointer; cursor: hand;
+		transition: all 275ms ease-out;
+		opacity: .6;
+		transform: translate(0,0px) scale(.85);
+		opacity: 0;
+		-webkit-backface-visibility: hidden;
 	}
 }
-
+button {
+	background: none;
+	border: 1px solid white;
+	outline: 0;
+	margin-top: 25px;
+	width: auto;
+	margin-right: 15px;
+	cursor: hand; cursor: pointer;
+	color: white;
+	padding: 15px;
+}
+button:last-of-type
+{
+	margin-right: 0px;
+}
+button:hover {
+	background: white;
+	color: $red;
+}
+.moar {
+	margin-top: 100%;
+}
 .push {
-	text-align: center;
+	text-align: left;
 	width: 90%;
 	max-width: 960px;
 	margin: 100px auto 50px auto;
@@ -195,10 +180,10 @@ html,
 		text-transform: uppercase;
 		font-size: 44px;
 	}
-	p 
+	p:not(.label)
 	{
-		margin-bottom: 55px;
-		font-size: 12px;
+		margin-bottom: 35px;
+		font-size: 14px;
 	}
 	img
 	{
@@ -206,32 +191,22 @@ html,
 	}
 	a 
 	{
-		display: block;
 		position: relative;
+		text-decoration: none;
+		display: block;
+		margin-bottom: 50px;
 		.label 
 		{
-			position: absolute;
-			top: 50%; left: 50%;
-			z-index: 50;
-			transform: translate(-50%,-50%) scale(.95);
-			color: $red;
-			opacity: 0;
-			padding: 25px 25px;
-			background-color: white;
-			font-size: 34px;
-			transition: all 250ms ease-out;
+			color: white;
+			outline: 1px solid white;
+			padding: 10px 25px;
+			width: auto;
+			display: inline;
 		}
-	}
-}
-.push:hover
-{
-	a
-	{
-		.label
+		.label:hover 
 		{
-			opacity: 1;
-			transform: translate(-50%,-50%) scale(1);
-			box-shadow: 0px 0px 5px rgba(0,0,0,.15);
+			background-color: white;
+			color: black;
 		}
 	}
 }
@@ -249,6 +224,10 @@ html,
 		width: 100%;
 	}
 }
+.logo:hover
+{
+	transform: scale(1.03);
+}
 
 .product {
 	margin: auto;
@@ -259,6 +238,16 @@ html,
 
 @media only screen 
 and (max-width : 650px)  { 
+
+.one
+{
+	padding-bottom: 70px;
+}
+
+.ntz-logo 
+{
+	width: 100%;
+}
 
 .play
 {
