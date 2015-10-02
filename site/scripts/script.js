@@ -1,12 +1,6 @@
 'use strict';
 document.addEventListener("DOMContentLoaded", function(event) { 
-	// var video = document.querySelector(".video-wrapper");
-	// var screenWrap = document.querySelector(".ntz-wrapper");
-	// var screenWrapHeight = screenWrap.offsetHeight;
-	// var videoHeight = video.offsetHeight;
-	// var videoTop = video.offsetTop;
-	// var marginTop = (( screenWrapHeight - videoHeight)/2) - videoTop/1.5;
-	// var marginBottom = (( screenWrapHeight - videoHeight)/2);
+	
 
 	// if(marginTop > 0){
 	// 	video.style.marginTop = marginTop + "px";
@@ -22,16 +16,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Call the API when a button is pressed
     $('.play').bind('click', function(event) {
         player.api('play');
+
+        var video = document.querySelector(".video-wrapper");
+		var screenHeight = window.innerHeight;
+		var videoHeight = video.offsetHeight;
+		var marginTop = (( screenHeight - videoHeight)/2);
+
         $('html,body').animate({
-        	scrollTop: $("#video").offset().top - 25
-        },'slow');
+        	scrollTop: ($("#video").offset().top - marginTop) + "px"
+        },1200);
         return false;
     });
 
     $(".buy").click(function() {
 	    $('html,body').animate({
         	scrollTop: $(".push").offset().top - 25
-        },'slow');
+        },1200);
         return false;
 	});
 
