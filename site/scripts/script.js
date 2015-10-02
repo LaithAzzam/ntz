@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	// 	console.log(screenWrapHeight, videoHeight);
 	// }
 
+	$('.slick').slick({
+		autoplay: true,
+  		autoplaySpeed: 3000,
+  		infinite: true,
+  		appendArrows: $('.arrows'),
+	}
+	);
+				
+
 	var iframe = $('#video')[0];
     var player = $f(iframe);
 

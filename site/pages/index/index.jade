@@ -5,6 +5,7 @@ html
 	+head( 'No Tech Zone' )
 	link(href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Roboto:400,700', rel='stylesheet', type='text/css')
 	body
+	script(src='https://gumroad.com/js/gumroad.js')
 	.ntz-wrapper
 		.one
 			.bottomShadow
@@ -20,12 +21,17 @@ html
 			.push 
 				h1 Buy limited edition prints
 				p Limited edition series of one hundred 18&#8221;x24&#8221; metal sign prints, signed by the artist. (We do not condone illegal installation of these signs.)
-				script(src='https://gumroad.com/js/gumroad.js')
 				a( href='https://gum.co/notechzone', target='_blank' )
 					p.label Purchase
-				script(src='https://gumroad.com/js/gumroad.js')
-				a( href='https://gum.co/notechzone', target='_blank' )
-					img( src="images/sign.jpg" alt="sign" )
+				.slick
+					a( href='https://gum.co/notechzone', target='_blank' )
+						img( src="images/img1.jpg" alt="sign1" )
+					a( href='https://gum.co/notechzone', target='_blank' )
+						img( src="images/img2.jpg" alt="sign2" )
+					a( href='https://gum.co/notechzone', target='_blank' )
+						img( src="images/img3.jpg" alt="sign3" )
+				.arrows
+
 			a( class="logo" href="http://www.cashstudios.co/" target="_blank" )
 				img( src="images/cashIcon.png" alt="Ivan Cash Studio")
 			

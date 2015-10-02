@@ -122,7 +122,7 @@ h1
 		text-transform: uppercase;
 		cursor: hand; cursor: pointer;
 		font-weight: 100;
-		font-size: 18px;
+		font-size: 30px;
 	}
 	a:last-of-type
 	{
@@ -183,8 +183,10 @@ button:hover {
 	p:not(.label)
 	{
 		margin-bottom: 35px;
-		font-size: 14px;
+		font-size: 24px;
 		max-width: 500px;
+		line-height: 1.3em;
+		opacity: .8;
 	}
 	img
 	{
@@ -194,20 +196,36 @@ button:hover {
 	{
 		position: relative;
 		text-decoration: none;
-		display: block;
-		margin-bottom: 50px;
 		.label 
 		{
 			color: white;
 			outline: 1px solid white;
-			padding: 10px 25px;
+			padding: 5px 15px;
 			width: auto;
-			display: inline;
+			display: inline-block;
+			font-size: 18px;
+			transition: all 150ms ease-out;
+    		margin-bottom: 50px;
 		}
 		.label:hover 
 		{
 			background-color: white;
 			color: black;
+		}
+	}
+	.arrows
+	{
+
+			text-align: center;
+			width: 100%;
+		button
+		{
+			background-color: transparent;
+			color: white;
+			outline: none; border: none;
+			padding: 0px;
+			text-transform: lowercase;
+			font-size: 14px;
 		}
 	}
 }
@@ -219,7 +237,7 @@ button:hover {
 	width: 150px;
 	margin-top: 25px;
 	margin-bottom: 45px;
-	transition: all 250ms ease-out;
+	transition:r all 250ms ease-out;
 	img 
 	{
 		width: 100%;
