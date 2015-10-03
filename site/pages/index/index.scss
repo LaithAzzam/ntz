@@ -1,5 +1,13 @@
 // Home
 
+
+*::selection {
+  background: $red; /* WebKit/Blink Browsers */
+}
+*::-moz-selection {
+  background: $red; /* Gecko Browsers */
+}
+
 body,
 html,
 .ntz-wrapper
@@ -123,7 +131,7 @@ h1
 		text-transform: uppercase;
 		cursor: hand; cursor: pointer;
 		font-weight: bold;
-		font-size: 30px;
+		font-size: 34px;
 	}
 	a:last-of-type
 	{
@@ -207,9 +215,10 @@ button:hover {
 			padding: 5px 15px;
 			width: auto;
 			display: inline-block;
-			font-size: 18px;
+			font-size: 22px;
 			transition: all 150ms ease-out;
     		margin-bottom: 50px;
+    		font-weight: 500;
 		}
 		.label:hover 
 		{
@@ -368,6 +377,13 @@ and (max-width : 650px)  {
 		{
 			font-size: 20px;
 		}
+	}
+}
+.actions
+{
+	a 
+	{
+		font-size: 26px;
 	}
 }
 
