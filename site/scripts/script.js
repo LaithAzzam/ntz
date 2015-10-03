@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		autoplay: true,
   		autoplaySpeed: 3000,
   		infinite: true,
-  		appendArrows: $('.arrows'),
+        dots: true,
+        centerMode: false,
+        arrows: false,
 	}
 	);
 				

@@ -4,6 +4,18 @@ mixin head( title )
 		title #{ title }
 		link( rel='stylesheet', href='main.css' )
 		link( rel='icon', type='image/png', href='favicon.png' )
+		// Facebook Pixel Code
+		script.
+			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+			n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+			document,'script','//connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '616043778483734');
+			fbq('track', "PageView");
+		noscript
+			img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=616043778483734&ev=PageView&noscript=1')
+		// End Facebook Pixel Code
 		script( src='scripts/jquery.js' )
 		link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css')
 		script(type='text/javascript', src='//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js')
